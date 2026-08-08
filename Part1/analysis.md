@@ -264,10 +264,10 @@ The cognitive-demand distribution is:
 
 | Cognitive level         |        A |        B |        C |
 | ----------------------- | -------: | -------: | -------: |
-| Recall (0)              |        9 |        6 |        0 |
-| Explain / Interpret (1) |        3 |        6 |        6 |
+| Recall (0)              |       11 |        7 |        0 |
+| Explain / Interpret (1) |        1 |        5 |        6 |
 | Apply / Reason (2)      |        0 |        0 |        2 |
-| **Average**             | **0.25** | **0.50** | **1.25** |
+| **Average**             |**0.083** |**0.417** | **1.25** |
 
 Strategy A is dominated by recall questions. Examples include asking for the learning-rate meaning, the gradient-descent update rule, the typical momentum coefficient, and the three batch variants.
 
@@ -477,7 +477,7 @@ There are three main reasons.
 All eight C questions were judged to be strongly supported by the lecture. This avoids the unsupported claims observed in Strategy A.
 
 **Second, cognitive demand.**
-C had the highest average cognitive-demand score at 1.25, compared with 0.50 for B and 0.25 for A. Its questions more frequently require explanation, prediction, diagnosis, or distinction rather than simple recall.
+C had the highest average cognitive-demand score at 1.25, substantially above B (0.417) and A (0.083).
 
 **Third, coverage and diversity.**
 C's questions cover multiple areas of the lecture, including gradient descent, learning rate, mini-batch training, momentum, backpropagation, memory, vanishing gradients, and training diagnosis. This contrasts with B's concentration around sigmoid and ReLU.
