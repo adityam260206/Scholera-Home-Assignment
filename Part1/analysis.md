@@ -227,7 +227,7 @@ The individual-question scores produce the following summary:
 | Questions produced            |               12 |            12 |                     8 |
 | Strongly grounded             |       9/12 (75%) |  12/12 (100%) |            8/8 (100%) |
 | Source-verifiable correctness |    9/11 (81.8%)* |  12/12 (100%) |            8/8 (100%) |
-| Average cognitive demand      |             0.25 |          0.50 |              **1.25** |
+| Average cognitive demand      |            0.083 |         0.417 |             **1.250** |
 | Average clarity               |           2.00/2 |        2.00/2 |                2.00/2 |
 | Topic coverage                |            Broad |        Narrow |                 Broad |
 | Redundancy                    |         Moderate |          High |                   Low |
