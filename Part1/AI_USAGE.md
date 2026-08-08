@@ -107,6 +107,7 @@ The following rules were used:
 5. Correctness can be marked `N/A` when the supplied lecture cannot establish whether the proposed answer is correct.
 6. Set-level observations such as coverage and redundancy are based on the actual question distribution, not on assumptions about how the strategies should behave.
 
+
 ## Known limitations of AI assistance
 
 AI assistance can introduce several risks:
@@ -118,6 +119,22 @@ AI assistance can introduce several risks:
 - It may encourage unnecessary numerical summaries.
 
 These risks were addressed by keeping the supplied files as the source of truth and by checking substantive judgments against the lecture.
+
+## A concrete example where AI was wrong
+
+During the initial analysis, AI produced incorrect aggregate cognitive-demand
+averages for Strategies A and B because some question-level classifications
+were initially grouped incorrectly. The first draft reported 0.25 for A and
+0.50 for B.
+
+I caught this by recalculating the aggregates directly from the question-level
+scoring sheet rather than trusting the generated summary. The final report
+uses the values calculated from the scoring sheet: 0.083 for A, 0.417 for B,
+and 1.250 for C.
+
+This reinforced an important limitation of using an LLM for evaluation:
+plausible-looking aggregate statistics should not be accepted without
+recalculation from the underlying observations.
 
 ## Reproducibility
 
