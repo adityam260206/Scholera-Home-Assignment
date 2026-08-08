@@ -1,41 +1,53 @@
-# Part 2 — Internal Study Memo
+# Internal Study — Pre-Class Primer Feature
 
-## What the four-week primer trial tells us
+Handed to you as-is. This is the summary an engineer produced after a four-week trial and posted
+in the team channel. Nothing has been cleaned up.
 
-### Bottom line
+---
 
-The trial provides an encouraging signal that pre-class primers may be associated with better on-time assignment submission. Treatment sections had a **7.4 percentage-point higher on-time submission rate** than control sections, and students who provided usefulness ratings generally rated the primers positively, with an average score of **4.1/5**.
+**What we tested.** Scholera can generate a short "primer" before each class: a few paragraphs
+summarising what the upcoming lecture covers, delivered to students the evening before.
 
-However, I would **not interpret the 7.4-point difference as a causal effect yet**. The study was conducted across only 11 sections, and several differences between treatment and control sections were not controlled. I would continue testing the feature, but I would not yet prioritize a graduate-specific rollout or pricing decision based on these results alone.
+We ran it for four weeks in eleven sections. Six sections got primers (treatment), five did not
+(control). We measured whether a student submitted the following assignment on time, and asked
+those who did to rate the primer's usefulness 1–5.
 
-### What the study supports
+**Headline result.** On-time submission was **7.4 percentage points higher** in sections that
+received primers. Satisfaction averaged 4.1 out of 5.
 
-The observed outcome is directionally encouraging. Across the four weeks, sections receiving primers had higher on-time submission rates. The undergraduate results were also positive in both groups: Year 1–2 students were at **78.9% vs. 71.2%** for treatment and control, while Year 3–4 students were at **85.1% vs. 79.5%**.
+**Breakdown by student level.**
 
-The usefulness ratings provide a second, weaker signal. Students who chose to rate the feature gave it an average score of 4.1/5, with similar ratings among the two undergraduate groups. This suggests that the primer was generally well received by respondents.
+| Student level | Group | Students | Submissions observed | On-time % | Mean usefulness (n rated) |
+|---|---|---:|---:|---:|---|
+| Undergraduate, year 1–2 | control | 214 | 1,284 | 71.2% | — |
+| Undergraduate, year 1–2 | treatment | 259 | 1,554 | 78.9% | 4.0 (n=171) |
+| Undergraduate, year 3–4 | control | 188 | 1,128 | 79.5% | — |
+| Undergraduate, year 3–4 | treatment | 201 | 1,206 | 85.1% | 4.2 (n=139) |
+| Graduate | control | 9 | 54 | 74.1% | — |
+| Graduate | treatment | 4 | 24 | 95.8% | 4.9 (n=4) |
 
-These results are sufficient for me to view the primer as **worth further testing**, rather than evidence that the feature has already been proven effective.
+**What jumps out.** The graduate cohort is dramatically more responsive — on-time submission
+jumped from 74% to nearly 96%, and they rated the feature 4.9 out of 5, the highest score
+anywhere in the study. That is a 21.7 point lift, roughly triple what we saw for undergraduates.
 
-### What the study does not establish
+**Proposed next step.** Prioritise primers for graduate sections in the next release and build
+the graduate-specific tuning we discussed. There is also an argument for charging more for the
+graduate tier given the engagement numbers.
 
-The main limitation is causal attribution. The study shows a difference between treatment and control sections, but it does not establish that the primer itself caused that difference.
+---
 
-There are several plausible confounders. Two treatment sections also introduced weekly quizzes during the trial, which could independently affect assignment behavior. One control professor was on leave for two of the four weeks. The study also observed that primers posted within 24 hours of class performed better, but this was not controlled and could reflect differences in professor engagement rather than primer timing itself.
+**Other things we noticed, unsorted:**
 
-The usefulness score has a separate limitation: ratings were voluntary, and only roughly two-thirds of treatment students rated the feature. We therefore cannot assume the 4.1/5 average represents all students who received a primer.
+- Sections whose professor posted primers within 24 hours of class saw better numbers than those
+  who scheduled them days ahead. We did not control for this and it may just be that engaged
+  professors are engaged in other ways too.
+- Two treatment sections had a professor who also switched to weekly quizzes during the trial
+  period.
+- One control section's professor was on leave for two of the four weeks.
+- Usefulness ratings were voluntary. Roughly two-thirds of treatment students rated at all.
+- We did not track whether students actually opened the primer, only that it was sent.
 
-I would also be cautious about the graduate result. The treatment group contains only **four graduate students**, compared with nine in control. Although the observed difference is large — 95.8% versus 74.1% — the sample is too small to make graduate-specific prioritization or pricing decisions confidently.
+---
 
-Finally, the study measured whether primers were **sent**, not whether students actually opened or read them. That prevents us from understanding the relationship between actual engagement with the primer and assignment behavior.
-
-### What I would do next
-
-I would run a larger, randomized follow-up in which comparable sections are assigned to either receive primers or serve as controls. The primary outcome should remain on-time assignment submission, but I would also record whether students actually opened the primer and measure engagement with it.
-
-I would track professor, course, and section-level factors that could affect submission behavior, and record other interventions introduced during the experiment, such as quizzes. Usefulness ratings should remain a secondary measure rather than the primary success metric because of the voluntary response rate.
-
-The next experiment should be designed to answer one specific question: **does receiving a primer itself improve student outcomes?**
-
-If a randomized follow-up reproduces a meaningful improvement in on-time submission, that would substantially strengthen the case for broader rollout. If the difference disappears after randomization and control of section-level factors, the original result would be better explained by differences between the sections rather than the primer.
-
-For now, my recommendation is therefore **continue testing the primer, but do not treat the current study as proof of causal impact or as sufficient evidence for graduate-specific pricing or prioritization**.
+*Your memo should tell the team what this data supports, what it does not, and what you would
+do next.*
