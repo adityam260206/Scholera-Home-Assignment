@@ -163,7 +163,7 @@ My recommendations are therefore intentionally provisional where the available e
 
 ## Video
 
-**Presentation:** `[Add final unlisted video link here]`
+**Presentation:** https://www.loom.com/share/11676815f776421cae9e220d884be67e
 
 The video will cover:
 
